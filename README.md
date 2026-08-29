@@ -16,6 +16,8 @@ Materi Pembahasan:
 
 ---
 
+Link data: [download data](https://docs.google.com/spreadsheets/d/1z_ZlMxsfP1OmaNKJuu2aQqxC6k5a3il51VElDeZVsv0)
+
 ## 1. Matematika & Statistik Dasar
 
 | Fungsi        | Contoh Formula                                      | Penjelasan                                                |
