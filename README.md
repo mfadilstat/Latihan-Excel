@@ -59,3 +59,23 @@ Link data: [download data](https://docs.google.com/spreadsheets/d/1z_ZlMxsfP1Oma
 ```
 
 ---
+
+## 2. Logika
+
+| Fungsi         | Contoh Formula                                                 | Penjelasan                                      |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------- |
+| `IF`           | `'=IF(A1>=75,"Lulus","Tidak Lulus")`                           | Jika nilai A1 ≥75 maka "Lulus"                  |
+| `IFS`          | `'=IFS(A1>=90,"A",A1>=75,"B",A1>=60,"C",TRUE,"D")`             | Banyak kondisi sekaligus                        |
+| `AND`          | `'=AND(A1>60,B1="Aktif")` → `TRUE`/`FALSE`                     | Benar jika SEMUA kondisi terpenuhi              |
+| `OR`           | `'=OR(A1="Ya",B1="Ya")` → `TRUE`/`FALSE`                       | Benar jika SALAH SATU kondisi terpenuhi         |
+| `NOT`          | `'=NOT(A1="Selesai")`                                          | Kebalikan dari kondisi                          |
+| `IFERROR`      | `'=IFERROR(A1/B1,"Error")`                                     | Tampilkan "Error" jika rumus menghasilkan error |
+| `IFNA`         | `'=IFNA(VLOOKUP(A1,C:D,2,0),"Tidak Ditemukan")`                | Tangani khusus error #N/A                       |
+| `SWITCH`       | `'=SWITCH(A1,1,"Senin",2,"Selasa",3,"Rabu","Tidak Diketahui")` | Cocokkan nilai A1 ke daftar kasus               |
+| `TRUE`/`FALSE` | `'=IF(A1=TRUE,"Ya","Tidak")`                                   | Nilai boolean langsung                          |
+
+**Contoh gabungan (IF bertingkat + AND):**
+
+```
+=IF(AND(A1>=80,B1="Hadir"),"Lolos","Tidak Lolos")
+```
