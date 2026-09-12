@@ -79,3 +79,27 @@ Link data: [download data](https://docs.google.com/spreadsheets/d/1z_ZlMxsfP1Oma
 ```
 =IF(AND(A1>=80,B1="Hadir"),"Lolos","Tidak Lolos")
 ```
+---
+
+## 3. Lookup & Referensi
+
+| Fungsi        | Contoh Formula                                      | Penjelasan                                                                  |
+| ------------- | --------------------------------------------------- | --------------------------------------------------------------------------- |
+| `VLOOKUP`     | `'=VLOOKUP(A1,D:F,3,FALSE)`                         | Cari A1 di kolom D, ambil hasil dari kolom ke-3 (F), exact match            |
+| `HLOOKUP`     | `'=HLOOKUP(A1,D1:H5,3,FALSE)`                       | Sama seperti VLOOKUP tapi mencari secara horizontal                         |
+| `XLOOKUP`     | `'=XLOOKUP(A1,D:D,F:F,"Tidak ada")`                 | Cari A1 di kolom D, ambil hasil dari kolom F (lebih fleksibel dari VLOOKUP) |
+| `INDEX`       | `'=INDEX(F2:F10,3)`                                 | Ambil nilai baris ke-3 dari range F2:F10                                    |
+| `MATCH`       | `'=MATCH("Budi",A2:A10,0)`                          | Cari posisi baris "Budi" di A2:A10                                          |
+| `INDEX+MATCH` | `'=INDEX(F2:F10,MATCH(A1,D2:D10,0))`                | Cari nilai A1 di D, ambil hasil sebaris di F (fleksibel ke kiri/kanan)      |
+| `LOOKUP`      | `'=LOOKUP(A1,D2:D10,F2:F10)`                        | Versi sederhana, data harus terurut                                         |
+| `CHOOSE`      | `'=CHOOSE(2,"Merah","Kuning","Hijau")` → `"Kuning"` | Pilih nilai ke-2 dari daftar                                                |
+| `OFFSET`      | `'=OFFSET(A1,2,1)`                                  | Referensi sel 2 baris ke bawah, 1 kolom ke kanan dari A1                    |
+| `INDIRECT`    | `'=INDIRECT("A1")`                                  | Ubah teks "A1" menjadi referensi sel A1                                     |
+| `ROW`         | `'=ROW(A5)` → `5`                                   | Nomor baris dari sel A5                                                     |
+| `COLUMN`      | `'=COLUMN(C1)` → `3`                                | Nomor kolom dari sel C1                                                     |
+| `ROWS`        | `'=ROWS(A1:A10)` → `10`                             | Jumlah baris dalam range                                                    |
+| `COLUMNS`     | `'=COLUMNS(A1:D1)` → `4`                            | Jumlah kolom dalam range                                                    |
+| `TRANSPOSE`   | `'=TRANSPOSE(A1:C1)`                                | Ubah data baris menjadi kolom (atau sebaliknya)                             |
+
+
+---
